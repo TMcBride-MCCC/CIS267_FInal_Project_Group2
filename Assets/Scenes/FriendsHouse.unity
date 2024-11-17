@@ -3736,7 +3736,7 @@ GameObject:
   - component: {fileID: 812830602}
   - component: {fileID: 812830601}
   m_Layer: 0
-  m_Name: Ground (Trees) (3)
+  m_Name: Trees 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7365,7 +7365,7 @@ GameObject:
   - component: {fileID: 1169323844}
   - component: {fileID: 1169323843}
   m_Layer: 0
-  m_Name: Ground (Trees) (1)
+  m_Name: Trees 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10357,7 +10357,7 @@ GameObject:
   - component: {fileID: 1260621717}
   - component: {fileID: 1260621716}
   m_Layer: 0
-  m_Name: Ground (Trees)
+  m_Name: Trees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13349,7 +13349,7 @@ GameObject:
   - component: {fileID: 1552014337}
   - component: {fileID: 1552014336}
   m_Layer: 0
-  m_Name: Ground (Trees) (2)
+  m_Name: Trees 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16341,7 +16341,7 @@ GameObject:
   - component: {fileID: 1665195907}
   - component: {fileID: 1665195906}
   m_Layer: 0
-  m_Name: Texture
+  m_Name: House Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16675,7 +16675,7 @@ GameObject:
   - component: {fileID: 1827834553}
   - component: {fileID: 1827834552}
   m_Layer: 0
-  m_Name: Objects
+  m_Name: House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
