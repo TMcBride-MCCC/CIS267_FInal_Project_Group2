@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LoadLevel
+  - LoadPath01
+  - LoadFriendHouse
+  - LoadPath02
+  - LoadCarePackage
+  - LoadPath03
   layers:
   - Default
   - TransparentFX
