@@ -21,6 +21,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    //FixedUpdate is frame rate independent and should be used for physics objects
+    private void FixedUpdate()
+    {
+        //Moving the player in fixed update stops jumping during movement
         movePlayer();
     }
 
