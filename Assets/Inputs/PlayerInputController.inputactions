@@ -1,5 +1,5 @@
 {
-    "name": "PlayerController",
+    "name": "PlayerInputController",
     "maps": [
         {
             "name": "Player",
@@ -177,7 +177,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "WASD",
                     "id": "d287c30f-0851-40fd-bda8-077e8aef3fd1",
                     "path": "2DVector",
                     "interactions": "",
@@ -193,7 +193,7 @@
                     "path": "<Keyboard>/#(W)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Xbox Control Scheme",
+                    "groups": "Xbox Control Scheme;Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -204,7 +204,7 @@
                     "path": "<Keyboard>/#(D)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Xbox Control Scheme",
+                    "groups": "Xbox Control Scheme;Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -215,7 +215,7 @@
                     "path": "<Keyboard>/#(A)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Xbox Control Scheme",
+                    "groups": "Xbox Control Scheme;Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -226,7 +226,7 @@
                     "path": "<Keyboard>/#(S)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Xbox Control Scheme",
+                    "groups": "Xbox Control Scheme;Keyboard",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
