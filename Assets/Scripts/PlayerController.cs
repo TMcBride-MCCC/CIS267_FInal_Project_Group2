@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D playerRB;
     private Vector2 movement;
-    public float movementSpeed;                                                                                          //Can be private later. Public for now for testing 
+    public float movementSpeed;                                                                                          //Can be private later. Public for now for testing
+    public GameObject noDestroy;
 
 
     // Start is called before the first frame update
@@ -44,14 +45,13 @@ public class PlayerController : MonoBehaviour
         playerRB.MovePosition(playerRB.position + movement * movementSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("LoadPath01"))
         {
             //gameObject.transform.SetParent(noDestroy.transform);
-            //DontDestroyOnLoad(noDestroy);
+            DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path01");
-
         }
         else if (collision.gameObject.CompareTag("LoadFriendHouse"))
         {
@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene("Path03");
         }
-
     }
 
 
