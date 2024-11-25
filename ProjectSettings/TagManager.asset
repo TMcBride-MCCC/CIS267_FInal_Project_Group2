@@ -10,7 +10,7 @@ TagManager:
   - LoadPath02
   - LoadCarePackage
   - LoadPath03
-  - Level2Transition
+  - CarePackage
   layers:
   - Default
   - TransparentFX
