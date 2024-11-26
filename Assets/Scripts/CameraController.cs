@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] PolygonCollider2D mapBoundaryFriendsHouse;
     [SerializeField] PolygonCollider2D mapBoundaryPath02;
     [SerializeField] PolygonCollider2D mapBoundaryCarePackageField;
+    [SerializeField] PolygonCollider2D mapBoundaryPath03;
 
 
     private CinemachineConfiner2D confiner;
@@ -100,6 +101,13 @@ public class CameraController : MonoBehaviour
         else if (sceneName == "CarePackageField")
         {
             confiner.m_BoundingShape2D = mapBoundaryCarePackageField;
+            confiner.InvalidateCache();
+            Debug.Log("Boundary updated to: " + sceneName);
+            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+        }
+        else if (sceneName == "Path03")
+        {
+            confiner.m_BoundingShape2D = mapBoundaryPath03;
             confiner.InvalidateCache();
             Debug.Log("Boundary updated to: " + sceneName);
             Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);

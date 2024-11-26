@@ -73,7 +73,9 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("LoadPath03"))
         {
+            DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path03");
+            gameObject.transform.position = new Vector3(transform.position.x - 25f, transform.position.y + 2f, transform.position.z);
         }
     }
 }
