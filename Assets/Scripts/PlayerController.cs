@@ -45,13 +45,14 @@ public class PlayerController : MonoBehaviour
         playerRB.MovePosition(playerRB.position + movement * movementSpeed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("LoadPath01"))
         {
             //gameObject.transform.SetParent(noDestroy.transform);
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path01");
+            gameObject.transform.position = new Vector3(transform.position.x - 20, transform.position.y, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadFriendHouse"))
         {
@@ -70,6 +71,4 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Path03");
         }
     }
-
-
 }
