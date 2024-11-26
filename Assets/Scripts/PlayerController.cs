@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         //Grabs the direction of the input
         movement = value.Get<Vector2>();
-        Debug.Log("Movement captured as: " +  movement);
+        //Debug.Log("Movement captured as: " +  movement);
     }
 
     private void movePlayer()
@@ -49,22 +49,27 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("LoadPath01"))
         {
-            //gameObject.transform.SetParent(noDestroy.transform);
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path01");
-            gameObject.transform.position = new Vector3(transform.position.x - 20, transform.position.y, transform.position.z);
+            gameObject.transform.position = new Vector3(transform.position.x - 20f, transform.position.y + 1, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadFriendHouse"))
         {
+            DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("FriendsHouse");
+            gameObject.transform.position = new Vector3(transform.position.x - 50f, transform.position.y - 2.5f, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadPath02"))
         {
+            DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path02");
+            gameObject.transform.position = new Vector3(transform.position.x -1f, transform.position.y + 9f, transform.position.z);
         }
-        else if (collision.gameObject.CompareTag("LoadCarePackage"))
+        else if (collision.gameObject.CompareTag("LoadCarePackageField"))
         {
-            SceneManager.LoadScene("CarePackage");
+            DontDestroyOnLoad(noDestroy);
+            SceneManager.LoadScene("CarePackageField");
+            gameObject.transform.position = new Vector3(transform.position.x + 1f, transform.position.y + 43f, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadPath03"))
         {

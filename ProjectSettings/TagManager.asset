@@ -8,9 +8,9 @@ TagManager:
   - LoadPath01
   - LoadFriendHouse
   - LoadPath02
-  - LoadCarePackage
   - LoadPath03
   - CarePackage
+  - LoadCarePackageField
   layers:
   - Default
   - TransparentFX

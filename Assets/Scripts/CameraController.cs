@@ -8,6 +8,10 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] PolygonCollider2D mapBoundaryStartScene;
     [SerializeField] PolygonCollider2D mapBoundaryPath01;
+    [SerializeField] PolygonCollider2D mapBoundaryFriendsHouse;
+    [SerializeField] PolygonCollider2D mapBoundaryPath02;
+    [SerializeField] PolygonCollider2D mapBoundaryCarePackageField;
+
 
     private CinemachineConfiner2D confiner;
     private CinemachineVirtualCamera virtualCamera;
@@ -75,6 +79,27 @@ public class CameraController : MonoBehaviour
         else if (sceneName == "Path01")
         {
             confiner.m_BoundingShape2D = mapBoundaryPath01;
+            confiner.InvalidateCache();
+            Debug.Log("Boundary updated to: " + sceneName);
+            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+        }
+        else if (sceneName == "FriendsHouse")
+        {
+            confiner.m_BoundingShape2D = mapBoundaryFriendsHouse;
+            confiner.InvalidateCache();
+            Debug.Log("Boundary updated to: " + sceneName);
+            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+        }
+        else if (sceneName == "Path02")
+        {
+            confiner.m_BoundingShape2D = mapBoundaryPath02;
+            confiner.InvalidateCache();
+            Debug.Log("Boundary updated to: " + sceneName);
+            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+        }
+        else if (sceneName == "CarePackageField")
+        {
+            confiner.m_BoundingShape2D = mapBoundaryCarePackageField;
             confiner.InvalidateCache();
             Debug.Log("Boundary updated to: " + sceneName);
             Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
