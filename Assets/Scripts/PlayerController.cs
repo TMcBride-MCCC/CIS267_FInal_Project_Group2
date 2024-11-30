@@ -43,6 +43,9 @@ public class PlayerController : MonoBehaviour
     {
         //Uses the direction of the input to move the player
         playerRB.MovePosition(playerRB.position + movement * movementSpeed * Time.deltaTime);
+
+        //flip sprite to face the correct way.
+        FlipPlayerSprite();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -76,6 +79,20 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path03");
             gameObject.transform.position = new Vector3(transform.position.x - 25f, transform.position.y + 2f, transform.position.z);
+        }
+    }
+
+    private void FlipPlayerSprite()
+    {
+        float inputHorizontal = Input.GetAxisRaw("Horizontal");
+
+        if (inputHorizontal > 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (inputHorizontal < 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
     }
 }
