@@ -11,6 +11,7 @@ TagManager:
   - LoadPath03
   - CarePackage
   - LoadCarePackageField
+  - ZombieSpawner
   layers:
   - Default
   - TransparentFX

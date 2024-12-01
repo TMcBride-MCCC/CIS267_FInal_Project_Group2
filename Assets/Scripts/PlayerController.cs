@@ -80,6 +80,11 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Path03");
             gameObject.transform.position = new Vector3(transform.position.x - 25f, transform.position.y + 2f, transform.position.z);
         }
+        else if (collision.gameObject.CompareTag("ZombieSpawner"))
+        {
+            collision.gameObject.GetComponent<ZombieSpawner>().spawnZombies();
+            Destroy(collision.gameObject);
+        }
     }
 
     private void FlipPlayerSprite()
