@@ -112,6 +112,13 @@ public class CameraController : MonoBehaviour
             //Debug.Log("Boundary updated to: " + sceneName);
             //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
+        else if (sceneName == "FriendHouse2")
+        {
+            confiner.m_BoundingShape2D = mapBoundaryFriendsHouse;
+            confiner.InvalidateCache();
+            //Debug.Log("Boundary updated to: " + sceneName);
+            //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+        }
     }
 
     private void updateFollow()
