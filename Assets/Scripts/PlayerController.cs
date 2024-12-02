@@ -26,7 +26,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            AddHealth(10);
+        }
     }
 
     //FixedUpdate is frame rate independent and should be used for physics objects
@@ -87,7 +90,7 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("LoadFriendHouse2"))
         {
             DontDestroyOnLoad(noDestroy);
-            SceneManager.LoadScene("FriendsHouse");
+            SceneManager.LoadScene("FriendsHouse2");
             //Will need to change the position below
             gameObject.transform.position = new Vector3(transform.position.x - 50f, transform.position.y - 2.5f, transform.position.z);
         }
@@ -155,5 +158,17 @@ public class PlayerController : MonoBehaviour
             playerDead = true;
             //Destroy(this.gameObject);
         }
+    }
+
+    private void AddHealth(int h)
+    {
+        currHealth += h;
+
+        if (currHealth > maxHealth)
+        {
+            currHealth = maxHealth;
+        }
+
+        Debug.Log("You have manually added " + h + " health");
     }
 }
