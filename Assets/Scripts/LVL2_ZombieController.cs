@@ -9,6 +9,7 @@ public class LVL2_ZombieController : MonoBehaviour
     public float speed;
     public float health;
     public int points;
+    public int damage;
 
     void Start()
     {
@@ -45,5 +46,10 @@ public class LVL2_ZombieController : MonoBehaviour
             // Face right
             transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
+    }
+
+    public int returnDamage()
+    {
+        return damage;
     }
 }

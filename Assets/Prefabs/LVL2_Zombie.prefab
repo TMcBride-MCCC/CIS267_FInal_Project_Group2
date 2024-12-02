@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1503251858051135895}
   m_Layer: 0
   m_Name: LVL2_Zombie
-  m_TagString: Zombie
+  m_TagString: Zombielvl2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,3 +174,4 @@ MonoBehaviour:
   speed: 5
   health: 2
   points: 2
+  damage: 2

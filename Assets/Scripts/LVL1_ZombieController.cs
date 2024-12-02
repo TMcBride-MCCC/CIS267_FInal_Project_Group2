@@ -9,6 +9,7 @@ public class LVL1_ZombieController : MonoBehaviour
     public float speed;
     public float health;
     public int points;
+    public int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -47,5 +48,10 @@ public class LVL1_ZombieController : MonoBehaviour
             // Face right
             transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
+    }
+
+    public int returnDamage()
+    {
+        return damage;
     }
 }

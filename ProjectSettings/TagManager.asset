@@ -12,6 +12,11 @@ TagManager:
   - CarePackage
   - LoadCarePackageField
   - ZombieSpawner
+  - Zombie
+  - Zombielvl1
+  - Zombielvl2
+  - Zombielvl3
+  - Apple
   layers:
   - Default
   - TransparentFX
