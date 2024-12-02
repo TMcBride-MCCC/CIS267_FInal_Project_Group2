@@ -27,20 +27,20 @@ public class CameraController : MonoBehaviour
 
         if (confiner == null )
         {
-            Debug.Log("No confiner found on Awake()");
+            //Debug.Log("No confiner found on Awake()");
         }
         else
         {
-            Debug.Log("Confiner found!");
+            //Debug.Log("Confiner found!");
         }
 
         if (virtualCamera == null)
         {
-            Debug.Log("No virtual camera found on Awake()");
+            //Debug.Log("No virtual camera found on Awake()");
         }
         else
         {
-            Debug.Log("Virtual camera found!");
+            //Debug.Log("Virtual camera found!");
         }
     }
 
@@ -74,43 +74,43 @@ public class CameraController : MonoBehaviour
         {
             confiner.m_BoundingShape2D = mapBoundaryStartScene;
             confiner.InvalidateCache();
-            Debug.Log("Boundary updated to: " + sceneName);
-            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+            //Debug.Log("Boundary updated to: " + sceneName);
+            //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
         else if (sceneName == "Path01")
         {
             confiner.m_BoundingShape2D = mapBoundaryPath01;
             confiner.InvalidateCache();
-            Debug.Log("Boundary updated to: " + sceneName);
-            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+            //Debug.Log("Boundary updated to: " + sceneName);
+            //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
         else if (sceneName == "FriendsHouse")
         {
             confiner.m_BoundingShape2D = mapBoundaryFriendsHouse;
             confiner.InvalidateCache();
-            Debug.Log("Boundary updated to: " + sceneName);
-            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+            //Debug.Log("Boundary updated to: " + sceneName);
+            //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
         else if (sceneName == "Path02")
         {
             confiner.m_BoundingShape2D = mapBoundaryPath02;
             confiner.InvalidateCache();
-            Debug.Log("Boundary updated to: " + sceneName);
-            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+            //Debug.Log("Boundary updated to: " + sceneName);
+            //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
         else if (sceneName == "CarePackageField")
         {
             confiner.m_BoundingShape2D = mapBoundaryCarePackageField;
             confiner.InvalidateCache();
-            Debug.Log("Boundary updated to: " + sceneName);
-            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+            //Debug.Log("Boundary updated to: " + sceneName);
+            //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
         else if (sceneName == "Path03")
         {
             confiner.m_BoundingShape2D = mapBoundaryPath03;
             confiner.InvalidateCache();
-            Debug.Log("Boundary updated to: " + sceneName);
-            Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
+            //Debug.Log("Boundary updated to: " + sceneName);
+            //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
     }
 
@@ -119,23 +119,12 @@ public class CameraController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            Debug.Log("Player found!");
+            //Debug.Log("Player found!");
             virtualCamera.Follow = player.transform;
         }
         else
         {
-            Debug.Log("Player not found");
+            //Debug.Log("Player not found");
         }
     }
-
-
-    /*    private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.CompareTag("LoadPath01"))
-            {
-                Debug.Log("I have collided with the path01 object");
-                confiner.m_BoundingShape2D = mapBoundaryPath01;
-                confiner.InvalidateCache();
-            }
-        }*/
 }
