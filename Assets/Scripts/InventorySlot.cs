@@ -31,6 +31,6 @@ public class InventorySlot : MonoBehaviour
         stackSizeText.enabled = true;
         
         icon.sprite = item.ItemData.icon;
-        stackSizeText.text = item.stackSize.ToString();
+        stackSizeText.text = "x" + item.stackSize.ToString();
     }
 }
