@@ -17,7 +17,9 @@ public class HeatlhBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float fillValue = player.currHealth / player.maxHealth;
+        float fillValue = (float)player.currHealth / player.maxHealth;
+        
+        //Debug.Log(fillValue);
         slider.value = fillValue;
     }
 }
