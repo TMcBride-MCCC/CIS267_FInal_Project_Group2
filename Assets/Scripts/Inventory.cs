@@ -51,4 +51,22 @@ public class Inventory : MonoBehaviour
             OnInventoryChange?.Invoke(inventory);
         }
     }
+
+    public bool UseItem(ItemData itemData)
+    {
+        if (!itemDictionary.TryGetValue(itemData,out InventoryItem item) && item.stackSize > 0)
+        {
+            item.RemoveFromStack();
+            if (item.stackSize == 0)
+            {
+                inventory.Remove(item);
+                itemDictionary.Remove(itemData);
+            }
+            OnInventoryChange?.Invoke(inventory);
+            return true;
+        }
+
+        Debug.Log("Uh oh! You don't have any apples in your inventory to use");
+        return false;
+    }
 }
