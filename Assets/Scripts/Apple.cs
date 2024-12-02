@@ -12,7 +12,7 @@ public class Apple : MonoBehaviour, ICollectible
 
     public void Collect()
     {
-        Debug.Log("You collected an apple");
+        //Debug.Log("You collected an apple");
         Destroy(gameObject);
         OnAppleCollected?.Invoke(greenAppleData);
     }

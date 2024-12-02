@@ -107,21 +107,21 @@ public class PlayerController : MonoBehaviour
         {
             LVL1_ZombieController level1Z = collision.gameObject.gameObject.GetComponent<LVL1_ZombieController>();
             currHealth -= level1Z.returnDamage();
-            Debug.Log(currHealth);
+            //Debug.Log(currHealth);
             isDead();
         }
         else if (collision.gameObject.CompareTag("Zombielvl2"))
         {
             LVL2_ZombieController level2Z = collision.gameObject.gameObject.GetComponent<LVL2_ZombieController>();
             currHealth -= level2Z.returnDamage();
-            Debug.Log(currHealth);
+            //Debug.Log(currHealth);
             isDead();
         }
         else if (collision.gameObject.CompareTag("Zombielvl3"))
         {
             LVL3_ZombieController level3Z = collision.gameObject.gameObject.GetComponent<LVL3_ZombieController>();
             currHealth -= level3Z.returnDamage();
-            Debug.Log(currHealth);
+            //Debug.Log(currHealth);
             isDead();
         }
         else if(collision.gameObject.CompareTag("Apple"))
@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
             {
                 currHealth = maxHealth;
             }
-            Debug.Log(currHealth);
+            //Debug.Log(currHealth);
             Destroy(collision.gameObject);
         }
     }
