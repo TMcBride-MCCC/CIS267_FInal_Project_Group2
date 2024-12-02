@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         {
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path02");
-            gameObject.transform.position = new Vector3(transform.position.x -1f, transform.position.y + 9f, transform.position.z);
+            gameObject.transform.position = new Vector3(transform.position.x - 1f, transform.position.y + 9f, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadCarePackageField"))
         {
@@ -83,6 +83,13 @@ public class PlayerController : MonoBehaviour
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path03");
             gameObject.transform.position = new Vector3(transform.position.x - 25f, transform.position.y + 2f, transform.position.z);
+        }
+        else if (collision.gameObject.CompareTag("LoadFriendHouse2"))
+        {
+            DontDestroyOnLoad(noDestroy);
+            SceneManager.LoadScene("FriendsHouse");
+            //Will need to change the position below
+            gameObject.transform.position = new Vector3(transform.position.x - 50f, transform.position.y - 2.5f, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("ZombieSpawner"))
         {
