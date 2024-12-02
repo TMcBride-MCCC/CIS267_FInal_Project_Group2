@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d04615406bb5bf944a3941734e43e22d, type: 3}
-  m_Name: AppleData
+  m_Name: GreenAppleData
   m_EditorClassIdentifier: 
-  displayName: Apple
-  icon: {fileID: 0}
+  displayName: Green Apple
+  icon: {fileID: 21300000, guid: e78989c36da51a64593104bc7d7197d3, type: 3}
