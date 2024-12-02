@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -38,6 +39,16 @@ public class Gamemanager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    public void restartGame()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void exitGame()
+    {
+        Application.Quit();
     }
 
 
