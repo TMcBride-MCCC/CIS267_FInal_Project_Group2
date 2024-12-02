@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7566636312415072643}
   - component: {fileID: 720529024665289133}
   - component: {fileID: 7840252075222618570}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LVL3_Zombie
   m_TagString: Zombielvl3
   m_Icon: {fileID: 0}
@@ -172,6 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  health: 5
+  currHealth: 10
   points: 2
   damage: 2
+  maxHealth: 10
+  pushBack: 0

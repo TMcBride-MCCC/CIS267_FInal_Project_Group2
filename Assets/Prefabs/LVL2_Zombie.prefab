@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4613701413292379651}
   - component: {fileID: 204573320675656200}
   - component: {fileID: 1503251858051135895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LVL2_Zombie
   m_TagString: Zombielvl2
   m_Icon: {fileID: 0}
@@ -172,6 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  health: 2
+  currHealth: 10
   points: 2
   damage: 2
+  maxHealth: 10
+  pushBack: 0

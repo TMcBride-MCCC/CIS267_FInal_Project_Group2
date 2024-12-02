@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8376321539010444502}
   - component: {fileID: 7723481843274921068}
   - component: {fileID: 5821787100919037766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LVL1_Zombie
   m_TagString: Zombielvl1
   m_Icon: {fileID: 0}
@@ -100,9 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  health: 2
-  points: 0
+  currHealth: 10
+  points: 1
   damage: 2
+  maxHealth: 10
+  pushBack: 0
 --- !u!50 &7723481843274921068
 Rigidbody2D:
   serializedVersion: 4
@@ -117,7 +119,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
