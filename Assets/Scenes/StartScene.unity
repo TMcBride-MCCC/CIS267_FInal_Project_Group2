@@ -8593,6 +8593,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c507d445a88613e4298cf93080ea29b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1706775841
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706775831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 717d48e040be2484aa4b3d930d922c78, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1737068308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12155,7 +12176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575676742070803763, guid: b7f0ed537e297ae4eba65a58163f9ddc, type: 3}
       propertyPath: movementSpeed
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7708580236236888203, guid: b7f0ed537e297ae4eba65a58163f9ddc, type: 3}
       propertyPath: m_Mass
@@ -12214,6 +12235,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1032687226770699424, guid: b7f0ed537e297ae4eba65a58163f9ddc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1706775836}
+    - targetCorrespondingSourceObject: {fileID: 1032687226770699424, guid: b7f0ed537e297ae4eba65a58163f9ddc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1706775841}
   m_SourcePrefab: {fileID: 100100000, guid: b7f0ed537e297ae4eba65a58163f9ddc, type: 3}
 --- !u!1001 &3334266933181198210
 PrefabInstance:

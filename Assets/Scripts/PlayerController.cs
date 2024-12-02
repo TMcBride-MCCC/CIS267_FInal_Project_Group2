@@ -14,12 +14,15 @@ public class PlayerController : MonoBehaviour
     public int currHealth;
     public int maxHealth;
     private bool playerDead = false;
+    private Animator playerAnimator;
 
 
     // Start is called before the first frame update
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
+
         currHealth = maxHealth;
     }
 
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
     {
         //Moving the player in fixed update stops jumping during movement
         movePlayer();
+        changeAnimation();
     }
 
     private void OnMovement(InputValue value)
@@ -148,6 +152,54 @@ public class PlayerController : MonoBehaviour
         else if (inputHorizontal < 0)
         {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
+
+    private void changeAnimation()
+    {
+        //Will need to change this to KeyCodeDown & KeyCodeUp pairs
+        //to switch from moving animations to idle animations
+
+        //Running down
+        if (Input.GetKey(KeyCode.S))
+        {
+            //The animation we want
+            playerAnimator.SetBool("isRunningDown", true);
+            //Set all other animations to false
+            playerAnimator.SetBool("isRunningUp", false);
+            playerAnimator.SetBool("isRunningRight", false);
+            playerAnimator.SetBool("isIdleUp", false);
+            playerAnimator.SetBool("isIdleRight", false);
+        }
+        //Running up
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            //The animation we want
+            playerAnimator.SetBool("isRunningUp", true);
+            //Set all other animations to false
+            playerAnimator.SetBool("isRunningDown", false);
+            playerAnimator.SetBool("isRunningRight", false);
+            playerAnimator.SetBool("isIdleUp", false);
+            playerAnimator.SetBool("isIdleRight", false);
+        }
+        //Idle up
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            //Idle animation set to true
+            playerAnimator.SetBool("isIdleUp", true);
+            //Walking animation set to false
+            playerAnimator.SetBool("isRunningUp", false);
+        }
+        //Running right
+        if (Input.GetKey(KeyCode.D))
+        {
+            //The animation we want
+            playerAnimator.SetBool("isRunningRight", true);
+            //Set all other animations to false
+            playerAnimator.SetBool("isRunningUp", false);
+            playerAnimator.SetBool("isRunningDown", false);
+            playerAnimator.SetBool("isIdleUp", false);
+            playerAnimator.SetBool("isIdleRight", false);
         }
     }
 
