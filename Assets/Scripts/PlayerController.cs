@@ -29,10 +29,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            AddHealth(10);
-        }
+        cheatCodes();
+
+        changeAnimation();
     }
 
     //FixedUpdate is frame rate independent and should be used for physics objects
@@ -40,7 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         //Moving the player in fixed update stops jumping during movement
         movePlayer();
-        changeAnimation();
     }
 
     private void OnMovement(InputValue value)
@@ -55,8 +53,42 @@ public class PlayerController : MonoBehaviour
         //Uses the direction of the input to move the player
         playerRB.MovePosition(playerRB.position + movement * movementSpeed * Time.deltaTime);
 
-        //flip sprite to face the correct way.
-        FlipPlayerSprite();
+        //We no longer need this to flip the player
+        //The animations flips the player
+        //Can we use this to change the position of the bat?
+        //FlipPlayerSprite();
+    }
+
+    private void FlipPlayerSprite()
+    {
+        float inputHorizontal = Input.GetAxisRaw("Horizontal");
+
+        if (inputHorizontal > 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (inputHorizontal < 0)
+        {
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+        }
+    }
+
+    private void changeAnimation()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        playerAnimator.SetFloat("Horizontal", movement.x);
+        playerAnimator.SetFloat("Vertical", movement.y);
+        playerAnimator.SetFloat("Speed", movement.sqrMagnitude);
+    }
+
+    private void cheatCodes()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            AddHealth(10);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -138,68 +170,6 @@ public class PlayerController : MonoBehaviour
             }
             //Debug.Log(currHealth);
             Destroy(collision.gameObject);
-        }
-    }
-
-    private void FlipPlayerSprite()
-    {
-        float inputHorizontal = Input.GetAxisRaw("Horizontal");
-
-        if (inputHorizontal > 0)
-        {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-        else if (inputHorizontal < 0)
-        {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
-        }
-    }
-
-    private void changeAnimation()
-    {
-        //Will need to change this to KeyCodeDown & KeyCodeUp pairs
-        //to switch from moving animations to idle animations
-
-        //Running down
-        if (Input.GetKey(KeyCode.S))
-        {
-            //The animation we want
-            playerAnimator.SetBool("isRunningDown", true);
-            //Set all other animations to false
-            playerAnimator.SetBool("isRunningUp", false);
-            playerAnimator.SetBool("isRunningRight", false);
-            playerAnimator.SetBool("isIdleUp", false);
-            playerAnimator.SetBool("isIdleRight", false);
-        }
-        //Running up
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            //The animation we want
-            playerAnimator.SetBool("isRunningUp", true);
-            //Set all other animations to false
-            playerAnimator.SetBool("isRunningDown", false);
-            playerAnimator.SetBool("isRunningRight", false);
-            playerAnimator.SetBool("isIdleUp", false);
-            playerAnimator.SetBool("isIdleRight", false);
-        }
-        //Idle up
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            //Idle animation set to true
-            playerAnimator.SetBool("isIdleUp", true);
-            //Walking animation set to false
-            playerAnimator.SetBool("isRunningUp", false);
-        }
-        //Running right
-        if (Input.GetKey(KeyCode.D))
-        {
-            //The animation we want
-            playerAnimator.SetBool("isRunningRight", true);
-            //Set all other animations to false
-            playerAnimator.SetBool("isRunningUp", false);
-            playerAnimator.SetBool("isRunningDown", false);
-            playerAnimator.SetBool("isIdleUp", false);
-            playerAnimator.SetBool("isIdleRight", false);
         }
     }
 

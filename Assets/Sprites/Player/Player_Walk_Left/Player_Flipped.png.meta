@@ -1,0 +1,333 @@
+fileFormatVersion: 2
+guid: 219d0459f21ea2e42bca94cea07b9d57
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_Flipped_24
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 167
+        width: 13
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c652aca001c79a489d117167703b3d6
+      internalID: -1416561411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Flipped_25
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 167
+        width: 13
+        height: 21
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2486ad0b33c7b4a8489fde98f85db1
+      internalID: -1106938309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Flipped_26
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 167
+        width: 13
+        height: 22
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357fcdfe52bee2c41aa91916706667fa
+      internalID: 2076886095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Flipped_27
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 167
+        width: 13
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730bc21bc22afcc40a0bc7fbea7d9445
+      internalID: 1312614546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Flipped_28
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 167
+        width: 13
+        height: 21
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933f0efa8f880534f9043a4b8d5dd679
+      internalID: 1486901183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Flipped_29
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 167
+        width: 13
+        height: 22
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc035dfe1a7d184db55d48907246856
+      internalID: 1129140776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Player_Flipped_0: 701059879
+      Player_Flipped_1: -377124193
+      Player_Flipped_10: -1414184355
+      Player_Flipped_11: -1610499343
+      Player_Flipped_12: -974743872
+      Player_Flipped_13: -1566147800
+      Player_Flipped_14: -754106162
+      Player_Flipped_15: 654313261
+      Player_Flipped_16: 155972888
+      Player_Flipped_17: -1547424838
+      Player_Flipped_18: -644385937
+      Player_Flipped_19: -1185988202
+      Player_Flipped_2: -243400177
+      Player_Flipped_20: 1624892023
+      Player_Flipped_21: 966775755
+      Player_Flipped_22: -1813956541
+      Player_Flipped_23: -2100455567
+      Player_Flipped_24: -1416561411
+      Player_Flipped_25: -1106938309
+      Player_Flipped_26: 2076886095
+      Player_Flipped_27: 1312614546
+      Player_Flipped_28: 1486901183
+      Player_Flipped_29: 1129140776
+      Player_Flipped_3: -1781852609
+      Player_Flipped_30: 1868366437
+      Player_Flipped_31: 1210054772
+      Player_Flipped_32: 964540262
+      Player_Flipped_33: -880844101
+      Player_Flipped_34: 1244581286
+      Player_Flipped_35: -586343936
+      Player_Flipped_36: -104906692
+      Player_Flipped_37: 782697399
+      Player_Flipped_38: -786087862
+      Player_Flipped_39: 1305115900
+      Player_Flipped_4: -1830983115
+      Player_Flipped_40: -1153581126
+      Player_Flipped_41: 719113167
+      Player_Flipped_42: 972572690
+      Player_Flipped_43: -967202846
+      Player_Flipped_44: 175692690
+      Player_Flipped_45: -982062809
+      Player_Flipped_46: -213733080
+      Player_Flipped_47: 731362346
+      Player_Flipped_48: 763232673
+      Player_Flipped_49: -702798239
+      Player_Flipped_5: -1490387536
+      Player_Flipped_50: 298910646
+      Player_Flipped_51: 1861346872
+      Player_Flipped_52: -1118725565
+      Player_Flipped_53: 1184853973
+      Player_Flipped_6: 1024710219
+      Player_Flipped_7: -2134702916
+      Player_Flipped_8: 809078737
+      Player_Flipped_9: -730113255
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
