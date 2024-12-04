@@ -194,6 +194,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ZombieSpawner"))
+        {
+            //collision.gameObject.GetComponent<ZombieSpawner>().spawnZombies();
+            //Destroy(collision.gameObject);
+        }
+    }
+
     private void isDead()
     {
         if (currHealth <= 0)
