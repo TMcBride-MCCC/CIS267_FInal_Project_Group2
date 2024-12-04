@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LVL3_ZombieController : MonoBehaviour
 {
+    [SerializeField] EnemyHealthBar healthBar;
+
     private GameObject player;
     private Vector2 playerLocation;
     public float speed;
@@ -20,6 +22,7 @@ public class LVL3_ZombieController : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+        healthBar = GetComponentInChildren<EnemyHealthBar>();
     }
 
     // Update is called once per frame
@@ -62,9 +65,9 @@ public class LVL3_ZombieController : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        
-            currHealth -= damage;
-            rb.velocity = new Vector2(pushBack, rb.velocity.y);
+        currHealth -= damage;
+        healthBar.updateHealthBar(currHealth, maxHealth);
+        rb.velocity = new Vector2(pushBack, rb.velocity.y);
 
 
 
