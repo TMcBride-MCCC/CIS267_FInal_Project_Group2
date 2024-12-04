@@ -118,38 +118,38 @@ public class PlayerController : MonoBehaviour
         {
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path01");
-            gameObject.transform.position = new Vector3(transform.position.x - 20f, transform.position.y + 1, transform.position.z);
+            gameObject.transform.position = new Vector3(-8f, -0.5f, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadFriendHouse"))
         {
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("FriendsHouse");
-            gameObject.transform.position = new Vector3(transform.position.x - 50f, transform.position.y - 2.5f, transform.position.z);
+            gameObject.transform.position = new Vector3(-8f, -3f, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadPath02"))
         {
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path02");
-            gameObject.transform.position = new Vector3(transform.position.x - 1f, transform.position.y + 9f, transform.position.z);
+            gameObject.transform.position = new Vector3(-0.5f, 2, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadCarePackageField"))
         {
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("CarePackageField");
-            gameObject.transform.position = new Vector3(transform.position.x + 1f, transform.position.y + 43f, transform.position.z);
+            gameObject.transform.position = new Vector3(1, 8, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadPath03"))
         {
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("Path03");
-            gameObject.transform.position = new Vector3(transform.position.x - 25f, transform.position.y + 2f, transform.position.z);
+            gameObject.transform.position = new Vector3(-7, -2, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("LoadFriendHouse2"))
         {
             DontDestroyOnLoad(noDestroy);
             SceneManager.LoadScene("FinalLevel");
             //Will need to change the position below
-            gameObject.transform.position = new Vector3(transform.position.x + 19, transform.position.y -62, transform.position.z);
+            gameObject.transform.position = new Vector3(11, -1, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("ZombieSpawner"))
         {
