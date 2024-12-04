@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public int currHealth;
     public int maxHealth;
     private bool playerDead = false;
+    public Gamemanager gamemanager;
 
 
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerInventory = GetComponentInChildren<Inventory>();
+        
 
         currHealth = maxHealth;
     }
@@ -211,6 +213,10 @@ public class PlayerController : MonoBehaviour
         {
             playerDead = true;
             //Destroy(this.gameObject);
+            Time.timeScale = 0f;
+            gamemanager = FindObjectOfType<Gamemanager>();
+            gamemanager.gameOver();
+
         }
     }
 
