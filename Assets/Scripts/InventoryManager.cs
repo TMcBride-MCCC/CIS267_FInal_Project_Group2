@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public GameObject slotPrefab;
-    public List<InventorySlot> inventorySlots = new List<InventorySlot>(3);
+    public List<InventorySlot> inventorySlots = new List<InventorySlot>(4);
 
     private void OnEnable()
     {

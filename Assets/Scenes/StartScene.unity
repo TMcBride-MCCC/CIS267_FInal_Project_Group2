@@ -12264,7 +12264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575676742070803763, guid: b7f0ed537e297ae4eba65a58163f9ddc, type: 3}
       propertyPath: movementSpeed
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7445319428005314508, guid: b7f0ed537e297ae4eba65a58163f9ddc, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x

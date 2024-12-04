@@ -112,7 +112,7 @@ public class CameraController : MonoBehaviour
             //Debug.Log("Boundary updated to: " + sceneName);
             //Debug.Log("BoundingShape is: " + confiner.m_BoundingShape2D);
         }
-        else if (sceneName == "FriendHouse2")
+        else if (sceneName == "FinalLevel")
         {
             confiner.m_BoundingShape2D = mapBoundaryFriendsHouse;
             confiner.InvalidateCache();

@@ -8,13 +8,15 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D playerRB;
+    private Animator playerAnimator;
+    private Inventory playerInventory;
+
     private Vector2 movement;
     public float movementSpeed;                                                                                          //Can be private later. Public for now for testing
     public GameObject noDestroy;
     public int currHealth;
     public int maxHealth;
     private bool playerDead = false;
-    private Animator playerAnimator;
 
 
     // Start is called before the first frame update
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        playerInventory = GetComponentInChildren<Inventory>();
 
         currHealth = maxHealth;
     }
@@ -32,6 +35,11 @@ public class PlayerController : MonoBehaviour
         cheatCodes();
 
         changeAnimation();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            eatApple();
+        }
     }
 
     //FixedUpdate is frame rate independent and should be used for physics objects
@@ -56,10 +64,10 @@ public class PlayerController : MonoBehaviour
         //We no longer need this to flip the player
         //The animations flips the player
         //Can we use this to change the position of the bat?
-        //FlipPlayerSprite();
+        //flipPlayerSprite();
     }
 
-    private void FlipPlayerSprite()
+    private void flipPlayerSprite()
     {
         float inputHorizontal = Input.GetAxisRaw("Horizontal");
 
@@ -83,11 +91,24 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
+    private void eatApple()
+    {
+        for (int i = 0; i < playerInventory.inventory.Count; i++)
+        {
+            if (playerInventory.inventory[i].ItemData.displayName == "Green Apple")
+            {
+                Debug.Log("You eat a green apple");
+                addHealth(50);
+                playerInventory.Remove(playerInventory.inventory[i].ItemData);
+            }
+        }
+    }
+
     private void cheatCodes()
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            AddHealth(10);
+            addHealth(10);
         }
     }
 
@@ -126,9 +147,9 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("LoadFriendHouse2"))
         {
             DontDestroyOnLoad(noDestroy);
-            SceneManager.LoadScene("FriendsHouse2");
+            SceneManager.LoadScene("FinalLevel");
             //Will need to change the position below
-            gameObject.transform.position = new Vector3(transform.position.x - 50f, transform.position.y - 2.5f, transform.position.z);
+            gameObject.transform.position = new Vector3(transform.position.x + 19, transform.position.y -62, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("ZombieSpawner"))
         {
@@ -182,7 +203,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void AddHealth(int h)
+    private void addHealth(int h)
     {
         currHealth += h;
 
