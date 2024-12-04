@@ -13,11 +13,13 @@ public class Inventory : MonoBehaviour
     private void OnEnable()
     {
         Apple.OnAppleCollected += Add;
+        BaseballBat.OnBatCollected += Add;
     }
 
     private void OnDisable()
     {
         Apple.OnAppleCollected -= Add;
+        BaseballBat.OnBatCollected -= Add;
     }
 
     public void Add(ItemData itemData)
