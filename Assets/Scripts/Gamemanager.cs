@@ -28,10 +28,15 @@ public class Gamemanager : MonoBehaviour
 
     public void pauseButtonPress()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetButtonDown("Submit"))
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0f;
+        }
+        else if(Input.GetButtonDown("Cancel"))
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1f;
         }
     }
 
@@ -44,6 +49,7 @@ public class Gamemanager : MonoBehaviour
     public void restartGame()
     {
         SceneManager.LoadScene("StartScene");
+        Time.timeScale = 1f;
     }
 
     public void exitGame()

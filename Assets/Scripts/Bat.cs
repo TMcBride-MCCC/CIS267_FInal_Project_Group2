@@ -34,7 +34,7 @@ public class Bat : MonoBehaviour
 
         if(Input.GetButton("Fire1"))
         {
-            //attack();
+            attack();
         }
 
         if(Input.GetButtonDown("Fire1"))
@@ -124,7 +124,7 @@ public class Bat : MonoBehaviour
 
             }
 
-          //Debug.Log("HIT + " + i);
+          Debug.Log("HIT");
 
 
         }
