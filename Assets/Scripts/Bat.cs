@@ -12,12 +12,15 @@ public class Bat : MonoBehaviour
     //public float primaryAttack;
     int i = 0;
     public SpriteRenderer[] spriteRenderer;
+    private float hitTime = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+       
         //PlayerInputHandler = GetComponent<PlayerInputHandler>();
         //primaryAttack = Input.GetAxis("Fire1");
+        hitTime += Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -33,14 +36,49 @@ public class Bat : MonoBehaviour
         {
             //attack();
         }
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            attack();
+            
+        }
         //Debug.Log(primaryAttack);
+
+        if(Input.GetAxis("Fire1") == 1)
+        {
+            //attack();
+            //if (hitTime >= 1f)
+            //{
+            //    attack();
+            //    hitTime = 0;
+            //}
+            //else
+            //{
+            //    hitTime += Time.deltaTime;
+            //}
+        }
+
+        if (hitTime >= 1f)
+        {
+            if(Input.GetAxisRaw("Fire1") == 1)
+            {  
+                attack();
+                hitTime = 0;
+            }
+            
+        }
+        else
+        {
+            hitTime += Time.deltaTime;
+        }
+
     }
 
     private void FixedUpdate()
     {
         if(Input.GetButton("Fire1"))
         {
-            attack();
+            //attack();
         }
     }
 
@@ -54,25 +92,39 @@ public class Bat : MonoBehaviour
             LVL1_ZombieController zombie = enemy.GetComponent<LVL1_ZombieController>();
             if(zombie != null)
             {
-                enemy.GetComponent<LVL1_ZombieController>().takeDamage(damage);
+                if (Random.Range(0, 100) < 25)
+                {
+                    //zombie.GetComponent<LVL1_ZombieController>().takeDamage(damage);
+                }
+                zombie.GetComponent<LVL1_ZombieController>().takeDamage(damage);
             }
             LVL2_ZombieController zombie2 = enemy.GetComponent<LVL2_ZombieController>();
             if (zombie2 != null)
             {
-                enemy.GetComponent<LVL2_ZombieController>().takeDamage(damage);
+                if (Random.Range(0, 100) < 25)
+                {
+                    //zombie2.GetComponent<LVL2_ZombieController>().takeDamage(damage);
+                }
+                zombie2.GetComponent<LVL2_ZombieController>().takeDamage(damage);
             }
             LVL3_ZombieController zombie3 = enemy.GetComponent<LVL3_ZombieController>();
             if (zombie3 != null)
             {
                 if (Random.Range(0, 100) < 25)
                 {
-                    zombie3.GetComponent<LVL3_ZombieController>().takeDamage(damage);
+                    //zombie3.GetComponent<LVL3_ZombieController>().takeDamage(damage);
                     i++;
                 }
-                  
+
+                zombie3.GetComponent<LVL3_ZombieController>().takeDamage(damage);
+                //i++;
+
+
+
+
             }
 
-          Debug.Log("HIT + " + i);
+          //Debug.Log("HIT + " + i);
 
 
         }
