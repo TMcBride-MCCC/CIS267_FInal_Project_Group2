@@ -38384,7 +38384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5541980558103439955, guid: 50ccb01cfb0221546881e0d68040d385, type: 3}
       propertyPath: m_TagString
-      value: LoadFriendHouse
+      value: LoadFriendHouse2
       objectReference: {fileID: 0}
     - target: {fileID: 7303763413138174506, guid: 50ccb01cfb0221546881e0d68040d385, type: 3}
       propertyPath: m_Enabled

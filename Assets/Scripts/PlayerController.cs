@@ -147,9 +147,9 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("LoadFriendHouse2"))
         {
             DontDestroyOnLoad(noDestroy);
-            SceneManager.LoadScene("FriendsHouse2");
+            SceneManager.LoadScene("FinalLevel");
             //Will need to change the position below
-            gameObject.transform.position = new Vector3(transform.position.x - 50f, transform.position.y - 2.5f, transform.position.z);
+            gameObject.transform.position = new Vector3(transform.position.x + 19, transform.position.y -62, transform.position.z);
         }
         else if (collision.gameObject.CompareTag("ZombieSpawner"))
         {
