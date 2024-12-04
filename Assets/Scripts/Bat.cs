@@ -9,18 +9,36 @@ public class Bat : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     public int damage;
-
+    //public float primaryAttack;
+    int i = 0;
+    public SpriteRenderer[] spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerInputHandler = GetComponent<PlayerInputHandler>();
+        //PlayerInputHandler = GetComponent<PlayerInputHandler>();
+        //primaryAttack = Input.GetAxis("Fire1");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //float axis = Input.GetAxisRaw("Fire1")
         if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            //attack();
+        }
+
+        if(Input.GetButton("Fire1"))
+        {
+            //attack();
+        }
+        //Debug.Log(primaryAttack);
+    }
+
+    private void FixedUpdate()
+    {
+        if(Input.GetButton("Fire1"))
         {
             attack();
         }
@@ -46,10 +64,63 @@ public class Bat : MonoBehaviour
             LVL3_ZombieController zombie3 = enemy.GetComponent<LVL3_ZombieController>();
             if (zombie3 != null)
             {
-                enemy.GetComponent<LVL3_ZombieController>().takeDamage(damage);
+                if (Random.Range(0, 100) < 25)
+                {
+                    zombie3.GetComponent<LVL3_ZombieController>().takeDamage(damage);
+                    i++;
+                }
+                  
             }
 
+          Debug.Log("HIT + " + i);
+
+
         }
+    }
+
+    private void OnCollisonEnter2D(Collider2D collision)
+    {
+        //if(collision.gameObject.CompareTag("Zombielvl1"))
+        //{
+            
+        //    if(Input.GetButton("Fire1"))
+        //    {
+        //        LVL1_ZombieController zombie = collision.GetComponent<LVL1_ZombieController>();
+        //        if (zombie != null)
+        //        {
+        //            collision.GetComponent<LVL1_ZombieController>().takeDamage(damage);
+        //        }
+        //    }
+        //}
+        //else if (collision.gameObject.CompareTag("Zombielvl2"))
+        //{
+
+        //    if (Input.GetButton("Fire1"))
+        //    {
+        //        LVL2_ZombieController zombie = collision.GetComponent<LVL2_ZombieController>();
+        //        if (zombie != null)
+        //        {
+        //            collision.GetComponent<LVL2_ZombieController>().takeDamage(damage);
+        //        }
+        //    }
+        //}
+        //else if (collision.gameObject.CompareTag("Zombielvl3"))
+        //{
+
+        //    if (Input.GetButton("Fire1"))
+        //    {
+        //        LVL3_ZombieController zombie = collision.GetComponent<LVL3_ZombieController>();
+        //        if (zombie != null)
+        //        {
+        //            zombie.GetComponent<LVL3_ZombieController>().takeDamage(damage);
+        //        }
+        //    }
+        //}
+    }
+
+    public void attack2(GameObject zomebieType)
+    {
+
     }
 
     private void OnDrawGizmosSelected()
@@ -59,4 +130,15 @@ public class Bat : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    public void batLevel2()
+    {
+
+    }
+
+    public void batLevel3()
+    {
+
+    }
+
 }

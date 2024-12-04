@@ -13,6 +13,7 @@ public class LVL3_ZombieController : MonoBehaviour
     public int maxHealth;
     public float pushBack;
     private Rigidbody2D rb;
+    int i = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -61,10 +62,13 @@ public class LVL3_ZombieController : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        currHealth -= damage;
-        rb.velocity = new Vector2(pushBack, rb.velocity.y);
+        
+            currHealth -= damage;
+            rb.velocity = new Vector2(pushBack, rb.velocity.y);
 
 
-        isDead();
+
+            isDead();
+        
     }
 }

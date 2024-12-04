@@ -18,6 +18,7 @@ TagManager:
   - Zombielvl3
   - Apple
   - LoadFriendHouse2
+  - AttackPoint
   layers:
   - Default
   - TransparentFX
