@@ -27,7 +27,7 @@ public class CarePkgMsg2 : MonoBehaviour
 
     void Update()
     {
-        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.F))
+        if (isPlayerInTrigger && Input.GetButtonDown("Fire2"))
         {
             //enable the message popup
             displayMessageSpriteRenderer.enabled = true;
