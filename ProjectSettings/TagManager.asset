@@ -19,6 +19,7 @@ TagManager:
   - Apple
   - LoadFriendHouse2
   - AttackPoint
+  - DoNotDestroyOnLoad
   layers:
   - Default
   - TransparentFX
