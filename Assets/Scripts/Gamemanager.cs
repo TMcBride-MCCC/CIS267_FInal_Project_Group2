@@ -70,16 +70,16 @@ public class Gamemanager : MonoBehaviour
 
     public void exitGame()
     {
-        gameOverMenu.SetActive(false);
-        pauseMenu.SetActive(false);
+        
         Application.Quit();
     }
 
     public void menu()
     {
+        
+        SceneManager.LoadScene("MainMenu");
         gameOverMenu.SetActive(false);
         pauseMenu.SetActive(false);
-        SceneManager.LoadScene("MainMenu");
     }
 
     public void gameOver()
