@@ -20,6 +20,7 @@ TagManager:
   - LoadFriendHouse2
   - AttackPoint
   - DoNotDestroyOnLoad
+  - Objective
   layers:
   - Default
   - TransparentFX

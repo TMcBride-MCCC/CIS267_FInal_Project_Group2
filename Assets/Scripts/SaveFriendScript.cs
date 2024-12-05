@@ -3,29 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CarePkgMsg2 : MonoBehaviour
+public class SaveFriendScript : MonoBehaviour
 {
-    public GameObject displayMessage;
-    public GameObject nextLevelLoadBox;
-    private SpriteRenderer displayMessageSpriteRenderer;
     private Collider2D triggerCollider;
-    private Collider2D nextLevelLoadBoxCollider;
-    private bool isPlayerInTrigger = false;
-    private bool isTimerRunning = false;
-    private float timer = 6f;
     private GameObject objectiveMessage;
     private Image objectiveMessageImage;
+    private bool isPlayerInTrigger = false;
+    public GameObject nextLevelLoadBox;
+    private Collider2D nextLevelLoadBoxCollider;
     public Sprite nextObjective;
-
+    // Start is called before the first frame update
     void Start()
     {
         //get the objectiveMessage
         objectiveMessage = GameObject.FindWithTag("Objective");
         //get the objective message image component
         objectiveMessageImage = objectiveMessage.GetComponent<Image>();
-
-        //get the display message sprite renderer
-        displayMessageSpriteRenderer = displayMessage.GetComponent<SpriteRenderer>();
 
         //get next level load box colldier
         nextLevelLoadBoxCollider = nextLevelLoadBox.GetComponent<Collider2D>();
@@ -37,37 +30,20 @@ public class CarePkgMsg2 : MonoBehaviour
         objectiveMessageImage.enabled = false;
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (isPlayerInTrigger && Input.GetButtonDown("Fire2"))
         {
             //enable the message popup
-            displayMessageSpriteRenderer.enabled = true;
+            objectiveMessageImage.sprite = nextObjective;
+            objectiveMessageImage.enabled = true;
 
             //disable collider on box so script still runs
             triggerCollider.enabled = false;
 
             //enable transition to next level
             nextLevelLoadBoxCollider.enabled = true;
-
-            isTimerRunning = true;
-
-            //enable the message popup
-            objectiveMessageImage.sprite = nextObjective;
-            objectiveMessageImage.enabled = true;
-        }
-
-        //count down timer
-        if (isTimerRunning)
-        {
-            timer -= Time.deltaTime;
-
-            if (timer <= 0f)
-            {
-                //delete both the message and the box collider
-                Destroy(displayMessage);
-                Destroy(gameObject);
-            }
         }
     }
 
@@ -86,4 +62,5 @@ public class CarePkgMsg2 : MonoBehaviour
             isPlayerInTrigger = false;
         }
     }
+
 }

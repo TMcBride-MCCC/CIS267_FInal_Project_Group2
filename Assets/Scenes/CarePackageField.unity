@@ -3062,6 +3062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayMessage: {fileID: 387383687}
   nextLevelLoadBox: {fileID: 1857822104}
+  nextObjective: {fileID: 21300000, guid: bb1cc1da118c90a448ae8fb94e5ad43d, type: 3}
 --- !u!61 &605880826
 BoxCollider2D:
   m_ObjectHideFlags: 0
