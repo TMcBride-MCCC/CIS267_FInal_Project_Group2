@@ -211,11 +211,11 @@ public class PlayerController : MonoBehaviour
     {
         if (currHealth <= 0)
         {
-            playerDead = true;
-            //Destroy(this.gameObject);
-            Time.timeScale = 0f;
-            gamemanager = FindObjectOfType<Gamemanager>();
-            gamemanager.gameOver();
+            //playerDead = true;
+            ////Destroy(this.gameObject);
+            //Time.timeScale = 0f;
+            //gamemanager = FindObjectOfType<Gamemanager>();
+            //gamemanager.gameOver();
 
         }
     }
