@@ -24,7 +24,9 @@ public class PlayerController : MonoBehaviour
     public bool inTrigger1 = false;
     public bool loadCarePackage = false;
     public bool loadEndGame = false;
-    
+
+    public AudioSource deathSound;
+    //public AudioClip clip;
 
 
     // Start is called before the first frame update
@@ -54,6 +56,8 @@ public class PlayerController : MonoBehaviour
         {
             eatApple();
         }
+
+        
 
         if(inTrigger1 && Input.GetButtonDown("Submit"))
         {
@@ -271,11 +275,12 @@ public class PlayerController : MonoBehaviour
     {
         if (currHealth <= 0)
         {
-            //playerDead = true;
+            playerDead = true;
             ////Destroy(this.gameObject);
-            //Time.timeScale = 0f;
-            //gamemanager = FindObjectOfType<Gamemanager>();
-            //gamemanager.gameOver();
+            Time.timeScale = 0f;
+            deathSound.Play();
+            gamemanager = FindObjectOfType<Gamemanager>();
+            gamemanager.gameOver();
 
         }
     }
