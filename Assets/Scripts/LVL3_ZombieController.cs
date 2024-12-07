@@ -16,6 +16,7 @@ public class LVL3_ZombieController : MonoBehaviour
     public float pushBack;
     private Rigidbody2D rb;
     int i = 0;
+    private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class LVL3_ZombieController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         healthBar = GetComponentInChildren<EnemyHealthBar>();
+        playerController = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,8 @@ public class LVL3_ZombieController : MonoBehaviour
         if (currHealth <= 0)
         {
             //***play death animation***
+
+            playerController.addScore(points);
 
             Destroy(this.gameObject);
         }

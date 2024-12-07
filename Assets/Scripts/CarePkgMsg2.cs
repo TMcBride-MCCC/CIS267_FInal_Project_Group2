@@ -16,6 +16,7 @@ public class CarePkgMsg2 : MonoBehaviour
     private GameObject objectiveMessage;
     private Image objectiveMessageImage;
     public Sprite nextObjective;
+    public Bat bat;
 
     void Start()
     {
@@ -35,6 +36,8 @@ public class CarePkgMsg2 : MonoBehaviour
 
         //the start of this is also the start of the scene, so we can use this to disable the "save friend" message when they load in
         objectiveMessageImage.enabled = false;
+
+        bat = GameObject.FindObjectOfType<Bat>();
     }
 
     void Update()
@@ -55,6 +58,9 @@ public class CarePkgMsg2 : MonoBehaviour
             //enable the message popup
             objectiveMessageImage.sprite = nextObjective;
             objectiveMessageImage.enabled = true;
+
+            bat.batLevel3();
+
         }
 
         //count down timer

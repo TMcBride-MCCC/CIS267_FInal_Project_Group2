@@ -15,6 +15,7 @@ public class LVL2_ZombieController : MonoBehaviour
     public int maxHealth;
     public float pushBack;
     private Rigidbody2D rb;
+    private PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class LVL2_ZombieController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
         healthBar = GetComponentInChildren<EnemyHealthBar>();
+        playerController = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class LVL2_ZombieController : MonoBehaviour
         playerLocation = player.transform.position;
         FlipZombieSprite();
         transform.position = Vector2.MoveTowards(transform.position, playerLocation, speed * Time.deltaTime);
+        
     }
 
     private void isDead()
@@ -37,6 +40,8 @@ public class LVL2_ZombieController : MonoBehaviour
         if (currHealth <= 0)
         {
             //***play death animation***
+
+            playerController.addScore(points);
 
             Destroy(this.gameObject);
         }

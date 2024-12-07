@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -19,7 +20,11 @@ public class Gamemanager : MonoBehaviour
     public GameObject restartSelect;
 
     public GameObject doNotDestroy;
-    
+
+    private PlayerController playerController;
+
+    public TMP_Text scoreText;
+
 
     public bool pauseMenuActive = false;
     // Start is called before the first frame update
@@ -27,6 +32,7 @@ public class Gamemanager : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag ("Player");
         //doNotDestroy = GameObject.FindGameObjectWithTag("DoNotDestroyOnLoad");
+        playerController = player.GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
@@ -92,9 +98,11 @@ public class Gamemanager : MonoBehaviour
     public void gameOver()
     {
 
-        
+        int finalScore = playerController.getScore();
 
         gameOverMenu.SetActive(true);
+
+        scoreText.SetText("Score " +  finalScore);
 
         EventSystem.current.SetSelectedGameObject(null);
 

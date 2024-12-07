@@ -388,10 +388,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   speed: 1
-  currHealth: 10
+  currHealth: 13
   points: 2
   damage: 2
-  maxHealth: 10
+  maxHealth: 13
   pushBack: 0
 --- !u!1 &8202282736780698770
 GameObject:

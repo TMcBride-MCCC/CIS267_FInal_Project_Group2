@@ -21,6 +21,11 @@ TagManager:
   - AttackPoint
   - DoNotDestroyOnLoad
   - Objective
+  - CheatCodeLoad
+  - CheatCodeLoadFriendHouse
+  - CheatCodeLoadCarePackage
+  - CheatCodeLoadEndGame
+  - Bat
   layers:
   - Default
   - TransparentFX

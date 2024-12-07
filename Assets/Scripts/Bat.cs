@@ -11,13 +11,15 @@ public class Bat : MonoBehaviour
     public int damage;
     //public float primaryAttack;
     int i = 0;
-    public SpriteRenderer[] spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     private float hitTime = 0;
+    public Sprite[] sprites;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = sprites[0];
         //PlayerInputHandler = GetComponent<PlayerInputHandler>();
         //primaryAttack = Input.GetAxis("Fire1");
         hitTime += Time.deltaTime;
@@ -34,7 +36,7 @@ public class Bat : MonoBehaviour
 
         if(Input.GetButton("Fire1"))
         {
-            attack();
+            //attack();
         }
 
         if(Input.GetButtonDown("Fire1"))
@@ -58,7 +60,7 @@ public class Bat : MonoBehaviour
             //}
         }
 
-        if (hitTime >= 1f)
+        if (hitTime >= .25f)
         {
             if(Input.GetAxisRaw("Fire1") == 1)
             {  
@@ -185,12 +187,12 @@ public class Bat : MonoBehaviour
 
     public void batLevel2()
     {
-
+        spriteRenderer.sprite = sprites[1];
     }
 
     public void batLevel3()
     {
-
+        spriteRenderer.sprite = sprites[2];
     }
 
 }

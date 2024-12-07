@@ -19,6 +19,13 @@ public class PlayerController : MonoBehaviour
     private bool playerDead = false;
     public Gamemanager gamemanager;
 
+    public int playerScore = 0;
+
+    public bool inTrigger1 = false;
+    public bool loadCarePackage = false;
+    public bool loadEndGame = false;
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +48,33 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             eatApple();
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            eatApple();
+        }
+
+        if(inTrigger1 && Input.GetButtonDown("Submit"))
+        {
+            DontDestroyOnLoad(noDestroy);
+            SceneManager.LoadScene("FriendsHouse");
+            gameObject.transform.position = new Vector3(-8f, -3f, transform.position.z);
+        }
+
+        if(loadCarePackage && Input.GetButtonDown("Submit"))
+        {
+            DontDestroyOnLoad(noDestroy);
+            SceneManager.LoadScene("CarePackageField");
+            gameObject.transform.position = new Vector3(1, 8, transform.position.z);
+        }
+
+        if (loadEndGame && Input.GetButtonDown("Submit"))
+        {
+            DontDestroyOnLoad(noDestroy);
+            SceneManager.LoadScene("FinalLevel");
+            //Will need to change the position below
+            gameObject.transform.position = new Vector3(11, -1, transform.position.z);
         }
     }
 
@@ -158,6 +192,19 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.GetComponent<ZombieSpawner>().spawnZombies();
             Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.CompareTag("CheatCodeLoadFriendHouse"))
+        {
+            inTrigger1 = true;
+            
+        }
+        else if (collision.gameObject.CompareTag("CheatCodeLoadCarePackage"))
+        {
+            loadCarePackage = true;
+        }
+        else if (collision.gameObject.CompareTag("CheatCodeLoadEndGame"))
+        {
+            loadEndGame = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -205,6 +252,19 @@ public class PlayerController : MonoBehaviour
             //collision.gameObject.GetComponent<ZombieSpawner>().spawnZombies();
             //Destroy(collision.gameObject);
         }
+        else if (collision.gameObject.CompareTag("CheatCodeLoadFriendHouse"))
+        {
+            inTrigger1 = false;
+        }
+        else if (collision.gameObject.CompareTag("CheatCodeLoadCarePackage"))
+        {
+            loadCarePackage = false;
+        }
+        else if (collision.gameObject.CompareTag("CheatCodeLoadEndGame"))
+        {
+            loadEndGame = false;
+        }
+
     }
 
     private void isDead()
@@ -230,5 +290,16 @@ public class PlayerController : MonoBehaviour
         }
 
         Debug.Log("You have manually added " + h + " health");
+    }
+
+
+    public void addScore(int score)
+    {
+        playerScore += score;
+    }
+
+    public int getScore()
+    {
+        return playerScore;
     }
 }

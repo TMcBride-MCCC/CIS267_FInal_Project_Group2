@@ -12,6 +12,8 @@ public class SaveFriendScript : MonoBehaviour
     public GameObject nextLevelLoadBox;
     private Collider2D nextLevelLoadBoxCollider;
     public Sprite nextObjective;
+
+    public Bat bat;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,8 @@ public class SaveFriendScript : MonoBehaviour
 
         //the start of this is also the start of the scene, so we can use this to disable the "save friend" message when they load in
         objectiveMessageImage.enabled = false;
+
+        bat = GameObject.FindAnyObjectByType<Bat>();
     }
 
     // Update is called once per frame
@@ -44,6 +48,8 @@ public class SaveFriendScript : MonoBehaviour
 
             //enable transition to next level
             nextLevelLoadBoxCollider.enabled = true;
+
+            bat.batLevel2();
         }
     }
 
