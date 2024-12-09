@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource deathSound;
     //public AudioClip clip;
-
+    public AudioSource running;
+    public AudioSource apple;
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +86,19 @@ public class PlayerController : MonoBehaviour
     {
         //Moving the player in fixed update stops jumping during movement
         movePlayer();
+        PlayerMoving();
+    }
+
+    private void PlayerMoving()
+    {
+        Vector3 playerVelo = playerRB.velocity;
+
+        Vector3 zero = Vector3.zero;
+
+        if(playerVelo != zero)
+        {
+            running.Play();
+        }
     }
 
     private void OnMovement(InputValue value)
@@ -98,6 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         //Uses the direction of the input to move the player
         playerRB.MovePosition(playerRB.position + movement * movementSpeed * Time.deltaTime);
+        running.Play();
 
         //We no longer need this to flip the player
         //The animations flips the player
@@ -135,8 +150,9 @@ public class PlayerController : MonoBehaviour
         {
             if (playerInventory.inventory[i].ItemData.displayName == "Green Apple")
             {
-                Debug.Log("You eat a green apple");
-                addHealth(50);
+                apple.Play();
+                //Debug.Log("You eat a green apple");
+                addHealth(10);
                 playerInventory.Remove(playerInventory.inventory[i].ItemData);
             }
         }
