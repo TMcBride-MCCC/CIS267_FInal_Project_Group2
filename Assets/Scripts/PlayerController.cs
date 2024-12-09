@@ -57,8 +57,6 @@ public class PlayerController : MonoBehaviour
             eatApple();
         }
 
-        
-
         if(inTrigger1 && Input.GetButtonDown("Submit"))
         {
             DontDestroyOnLoad(noDestroy);
@@ -247,8 +245,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("ZombieSpawner"))
@@ -270,7 +266,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
     private void isDead()
     {
         if (currHealth <= 0)
