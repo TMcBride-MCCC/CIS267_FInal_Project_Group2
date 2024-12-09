@@ -14,8 +14,13 @@ public class MainMenu : MonoBehaviour
     public GameObject optionsMenu;
     public void PlayGame()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("StartScene");
+    }
 
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Credits()

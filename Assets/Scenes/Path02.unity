@@ -178,8 +178,14 @@ PrefabInstance:
       propertyPath: zombies.Array.data[2]
       value: 
       objectReference: {fileID: 7038495419175638440, guid: 2b0dba0f1e4d7824a97a1ef0dd273fb7, type: 3}
+    - target: {fileID: 3995871969616486104, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
+      propertyPath: zombieSpawnLocations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 314246848781263755, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
+    - {fileID: 1394948200383696787, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
@@ -594,8 +600,14 @@ PrefabInstance:
       propertyPath: zombies.Array.data[2]
       value: 
       objectReference: {fileID: 7038495419175638440, guid: 2b0dba0f1e4d7824a97a1ef0dd273fb7, type: 3}
+    - target: {fileID: 3995871969616486104, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
+      propertyPath: zombieSpawnLocations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 314246848781263755, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
+    - {fileID: 1394948200383696787, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
@@ -26190,8 +26202,13 @@ PrefabInstance:
       propertyPath: zombies.Array.data[2]
       value: 
       objectReference: {fileID: 7038495419175638440, guid: 2b0dba0f1e4d7824a97a1ef0dd273fb7, type: 3}
+    - target: {fileID: 3995871969616486104, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
+      propertyPath: zombieSpawnLocations.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 314246848781263755, guid: 1c603de4ef145124884430e7fe872f59, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c603de4ef145124884430e7fe872f59, type: 3}

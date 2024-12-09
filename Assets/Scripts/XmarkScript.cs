@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class XmarkScript : MonoBehaviour
 {
@@ -16,8 +18,7 @@ public class XmarkScript : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.F))
         {
-            //if the player is in the X and presses F, do this
-            Debug.Log("The player has dropped the flare");
+            SceneManager.LoadScene("YouWin");
         }
     }
 
