@@ -16,6 +16,8 @@ public class LVL1_ZombieController : MonoBehaviour
     public float pushBack;
     private Rigidbody2D rb;
     private PlayerController playerController;
+    public AudioSource audioPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +69,7 @@ public class LVL1_ZombieController : MonoBehaviour
 
     public void takeDamage(int damage)
     {
+        audioPlayer.Play();
         currHealth -= damage;
         healthBar.updateHealthBar(currHealth, maxHealth);
         rb.velocity = new Vector2(pushBack,rb.velocity.y);

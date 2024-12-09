@@ -387,6 +387,7 @@ MonoBehaviour:
   damage: 2
   maxHealth: 10
   pushBack: 0
+  audioPlayer: {fileID: 2184668537181011442, guid: f42c7d44f3a54d345b3516eb3db2ecd6, type: 3}
 --- !u!50 &7723481843274921068
 Rigidbody2D:
   serializedVersion: 4

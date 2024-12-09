@@ -14,6 +14,7 @@ public class Bat : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     private float hitTime = 0;
     public Sprite[] sprites;
+    public AudioSource audioPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -193,6 +194,23 @@ public class Bat : MonoBehaviour
     public void batLevel3()
     {
         spriteRenderer.sprite = sprites[2];
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Zombielvl1"))
+        {
+            audioPlayer.Play();
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Zombielvl1"))
+        {
+            audioPlayer.Play();
+        }
+
     }
 
 }
