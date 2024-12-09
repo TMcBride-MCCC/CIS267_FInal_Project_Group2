@@ -15,6 +15,7 @@ public class Bat : MonoBehaviour
     private float hitTime = 0;
     public Sprite[] sprites;
     //public AudioSource audioPlayer;
+    public AudioSource hitSound;
 
     // Start is called before the first frame update
     void Start()
@@ -99,7 +100,9 @@ public class Bat : MonoBehaviour
                 {
                     //zombie.GetComponent<LVL1_ZombieController>().takeDamage(damage);
                 }
+                hitSound.Play();
                 zombie.GetComponent<LVL1_ZombieController>().takeDamage(damage);
+
             }
             LVL2_ZombieController zombie2 = enemy.GetComponent<LVL2_ZombieController>();
             if (zombie2 != null)
@@ -108,6 +111,7 @@ public class Bat : MonoBehaviour
                 {
                     //zombie2.GetComponent<LVL2_ZombieController>().takeDamage(damage);
                 }
+                hitSound.Play();
                 zombie2.GetComponent<LVL2_ZombieController>().takeDamage(damage);
             }
             LVL3_ZombieController zombie3 = enemy.GetComponent<LVL3_ZombieController>();
@@ -118,7 +122,7 @@ public class Bat : MonoBehaviour
                     //zombie3.GetComponent<LVL3_ZombieController>().takeDamage(damage);
                     i++;
                 }
-
+                hitSound.Play();
                 zombie3.GetComponent<LVL3_ZombieController>().takeDamage(damage);
                 //i++;
 
@@ -127,7 +131,7 @@ public class Bat : MonoBehaviour
 
             }
 
-          Debug.Log("HIT");
+          //Debug.Log("HIT");
 
 
         }
