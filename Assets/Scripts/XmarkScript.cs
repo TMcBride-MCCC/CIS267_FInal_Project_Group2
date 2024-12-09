@@ -16,7 +16,7 @@ public class XmarkScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.F))
+        if (isPlayerInTrigger && Input.GetButtonDown("Fire2"))
         {
             SceneManager.LoadScene("YouWin");
         }

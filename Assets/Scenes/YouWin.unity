@@ -417,7 +417,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 542126571}
-  - component: {fileID: 542126572}
   m_Layer: 0
   m_Name: MenuButtons
   m_TagString: Untagged
@@ -441,23 +440,6 @@ Transform:
   - {fileID: 1509519169}
   m_Father: {fileID: 1547288426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &542126572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542126570}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac0e337936f94684e80cde020b33097f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstButton: {fileID: 0}
-  creditsClose: {fileID: 0}
-  creditsOpen: {fileID: 0}
-  menu: {fileID: 0}
-  optionsMenu: {fileID: 0}
 --- !u!1 &1148823459
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148823461}
-  - component: {fileID: 1148823460}
+  - component: {fileID: 1148823462}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -475,23 +457,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1148823460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148823459}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac0e337936f94684e80cde020b33097f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstButton: {fileID: 0}
-  creditsClose: {fileID: 0}
-  creditsOpen: {fileID: 0}
-  menu: {fileID: 0}
-  optionsMenu: {fileID: 0}
 --- !u!4 &1148823461
 Transform:
   m_ObjectHideFlags: 0
@@ -508,6 +473,19 @@ Transform:
   - {fileID: 1547288426}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148823462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148823459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f07e8e5ee462694482168ce1698cb55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstButton: {fileID: 1509519168}
 --- !u!1 &1509519168
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,8 +569,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1148823460}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1148823462}
+        m_TargetAssemblyTypeName: WinScreenScript, Assembly-CSharp
         m_MethodName: GoToMenu
         m_Mode: 1
         m_Arguments:
