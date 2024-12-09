@@ -108,6 +108,11 @@ public class Gamemanager : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(restartSelect);
     }
+
+    public void destroyPlayer()
+    {
+        Destroy(doNotDestroy);
+    }
    
 
 }
